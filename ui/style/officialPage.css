@@ -1,0 +1,19 @@
+body{
+	background-color: #fdffe5;
+}
+
+.myrow {
+  display: flex;
+}
+
+.column {
+  flex: 33.33%;
+  padding: 5px;
+}
+
+img{
+	float: left;
+	width: 7%;
+	height: auto;
+	margin-left: 2%;
+}
