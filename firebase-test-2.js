@@ -12,7 +12,7 @@ var config = {
 //firebase.initializeApp(config);
 
 var mainApp=firebase.initializeApp(config);
-console.log(mainApp.name);
+//console.log(mainApp.name);
 var fireDatabase=firebase.database();
 
 var databaseTree;
@@ -35,10 +35,11 @@ fireDatabase.ref("Pothole_Reports/").on('value', function(snapshot){
 //console.log(fireDatabase.ref("Pothole_Reports/"));
 
 //firebase call is asyncrhonous in nature
-// var users=[];
-// var photos=[];
-// var count=0;
-// var keyValue=new Object;
+var users=[];
+var photos=[];
+
+var count=0;
+var keyValue=new Object;
 
 var i = 1;
 
@@ -50,9 +51,13 @@ fireDatabase.ref("Pothole_Reports/").once('value', function(snapshot){
 		childSnapshot.forEach(function(child_childSnapshot){
 			//photos.push(child_childSnapshot.key);
 			if(child_childSnapshot.val().Status>=50){ 
-				console.log(child_childSnapshot.val().Status+" "+childSnapshot.key+" "+child_childSnapshot.key+" "+child_childSnapshot.val().GPS_Coordinates+" "+child_childSnapshot.val().RealArea);
-				$("#t_body").append("<tr><td>"+i+"</td><td>"+child_childSnapshot.val().Status+"</td><td>"+child_childSnapshot.key+"</td><td>"+child_childSnapshot.val().GPS_Coordinates+"</td><td>"+child_childSnapshot.val().RealArea+"</td><td scope='col'><input class='btn btn-primary' type='button' name='engineer' value='engg' data-toggle='modal' data-target='#exampleModal'></td><td scope='col'><input class='btn btn-primary' type='button' name='user' value='user' data-toggle='modal' data-target='#exampleModal'></td></tr>");
+				//console.log(child_childSnapshot.val().Status+" "+childSnapshot.key+" "+child_childSnapshot.key+" "+child_childSnapshot.val().GPS_Coordinates+" "+child_childSnapshot.val().RealArea);
+
+				$("#t_body").append("<tr><td>"+i+"</td><td>"+child_childSnapshot.val().Status+"</td><td>"+child_childSnapshot.key+"</td><td>"+child_childSnapshot.val().GPS_Coordinates+"</td><td>"+child_childSnapshot.val().RealArea+"</td><td scope='col'><input id = "+i+ '-eng' + " class='btn btn-primary' type='button' name='engineer' value='engg' data-toggle='modal' data-target='#EnggModal'></td><td scope='col'><input id = "+i+'-user'+" class='btn btn-primary' type='button' name='user' value='user' data-toggle='modal' data-target='#UserModal'></td></tr>");
+
+				$("#modal-forms").append("<div class='modal fade' id='EnggModal' tabindex='-1' role='dialog' aria-labelledby='EnggModalLabel' aria-hidden='true'><div class='modal-dialog' role='document'><div class='modal-content'><div class='modal-header'><h5 class='modal-title' class='exampleModalLabel'>Send Email to Engineer</h5><button type='button' class='close' data-dismiss='modal' aria-label='Close'><span aria-hidden='true'>&times;</span></button></div><div class='modal-body'><form><table><tr><td>Email:</td><td><input class='form-control' type='email' id='address' name='email'></td></tr><tr><td>Details:<p class='row_data'>"+child_childSnapshot.val().Status+"<br>"+childSnapshot.key+"<br>"+child_childSnapshot.key+"<br>"+child_childSnapshot.val().GPS_Coordinates+"<br>"+child_childSnapshot.val().RealArea +"</p></td></tr></table></form></div><div class='modal-footer'><button type='button' class='btn btn-secondary' data-dismiss='modal'>Close</button><button type='button' id='submit"+i+"' class='btn btn-primary'>Send</button></div></div></div></div>");
 				i += 1;
+
 			}
 				
 		});
