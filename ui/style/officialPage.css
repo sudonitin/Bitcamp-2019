@@ -1,9 +1,15 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto');
+
+
 body{
 	background-color: #fdffe5;
+	font-family: 'Roboto';
 }
 
 .myrow {
   display: flex;
+  background-color: #0154ba;
+  color: white;
 }
 
 .column {
@@ -17,3 +23,34 @@ img{
 	height: auto;
 	margin-left: 2%;
 }
+
+table{
+	text-align: center;
+	font-weight: bold;
+}
+
+table thead{
+	background-color: #1d1d26;
+	color: white;
+}
+
+.btn{
+	background-color: #fcc30f;
+	border: none;
+	color: black;
+	font-weight: bold;
+	width: 45%;
+}
+
+.btn:hover{
+	background-color: #ffc000;
+	color: red;
+	font-size: 105%;
+}
+
+.marq{
+	color: red;
+	font-weight: bold;
+	background-color: #f4b800;
+}
+

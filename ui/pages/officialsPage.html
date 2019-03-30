@@ -8,44 +8,82 @@
 	<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
 	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+	<script src="https://www.gstatic.com/firebasejs/5.9.2/firebase.js"></script>
+	<script src="https://www.gstatic.com/firebasejs/5.9.2/firebase-app.js"></script>
+	<script src="https://www.gstatic.com/firebasejs/5.9.2/firebase-database.js"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<!-- <script src="./firebase-test.js"> </script> -->
+	<script src="../../firebase-test-2.js"></script>
+
 </head>
 <body>
 	<div class="myrow">
-		<div class="column"><img src="../tabIcon.png"><div style="margin-top: 2%;"><h2>Municipal Corporation of Mumbai</h2></div></div>
-	</div><br>
+		<div class="column"><img src="../headerIcon.png"><div style="margin-top: 1%;"><h2>बृहन्मुंबई महानगरपालिका<br>Municipal Corporation of Mumbai</h2></div></div>
+	</div>
+	<marquee class='marq'>Install the new Pothole Reporting application from Play Store and App Store | Register for 2019 elections now | Choose your region for toilet setup | For water connections visit  the official MCGM website | Update your Aadhar details here | </marquee>
 	<div class="details-table">
 		<table class="table" id="details">
 			<thead>
 				<tr>
 					<th scope="col">#</th>
-					<th scope="col">UserId</th>
-					<th scope="col">Report Time</th>
+					<th scope="col">Status</th>
+					<th scope="col">Timestamp</th>
 					<th scope="col">Location</th>
-					<th scope="col">Submit</th>
+					<th scope="col">Est. Area</th>
+					<th scope="col">Submit To Engineer</th>
+					<th scope="col">Submit To User</th>
+				</tr>
+				<!-- <tr>
+					<td scope="col">#</td>
+					<td scope="col">UserId</td>
+					<td scope="col">Report Time</td>
+					<td scope="col">Location</td>
+					<td scope="col"><input class='"btn btn-primary"' type='"button"' name='"engineer"' value='"engg"' data-toggle='"modal"' data-target='"#exampleModal"'></td>
+					<td> <input class="btn btn-primary" type="button" name="user" value="user"></td>
 				</tr>
 				<tr>
 					<td scope="col">#</td>
 					<td scope="col">UserId</td>
 					<td scope="col">Report Time</td>
 					<td scope="col">Location</td>
-					<td scope="col"><input class="btn btn-primary" type="button" name="engineer" value="engg"> <input class="btn btn-primary" type="button" name="user" value="user"></td>
+					<td scope="col"><input class="btn btn-primary" type="button" name="engineer" value="engg"></td>
+					<td> <input class="btn btn-primary" type="button" name="user" value="user"></td>
 				</tr>
 				<tr>
 					<td scope="col">#</td>
 					<td scope="col">UserId</td>
 					<td scope="col">Report Time</td>
 					<td scope="col">Location</td>
-					<td scope="col"><input class="btn btn-primary" type="button" name="engineer" value="engg"> <input class="btn btn-primary" type="button" name="user" value="user"></td>
-				</tr>
-				<tr>
-					<td scope="col">#</td>
-					<td scope="col">UserId</td>
-					<td scope="col">Report Time</td>
-					<td scope="col">Location</td>
-					<td scope="col"><input class="btn btn-primary" type="button" name="engineer" value="engg"> <input class="btn btn-primary" type="button" name="user" value="user"></td>
-				</tr>
+					<td scope="col"><input class="btn btn-primary" type="button" name="engineer" value="engg"></td>
+					<td> <input class="btn btn-primary" type="button" name="user" value="user"></td>
+				</tr> -->
 			</thead>
+			<tbody id="t_body">
+				
+			</tbody>
 		</table>
 	</div>
+
+	<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+	  <div class="modal-dialog" role="document">
+	    <div class="modal-content">
+	      <div class="modal-header">
+	        <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+	        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+	          <span aria-hidden="true">&times;</span>
+	        </button>
+	      </div>
+	      <div class="modal-body">
+	        ...
+	      </div>
+	      <div class="modal-footer">
+	        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+	        <button type="button" class="btn btn-primary">Save changes</button>
+	      </div>
+	    </div>
+	  </div>
+	</div>
+
+
 </body>
 </html>

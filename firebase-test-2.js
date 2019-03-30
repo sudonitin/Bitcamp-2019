@@ -35,20 +35,24 @@ fireDatabase.ref("Pothole_Reports/").on('value', function(snapshot){
 //console.log(fireDatabase.ref("Pothole_Reports/"));
 
 //firebase call is asyncrhonous in nature
-var users=[];
-var photos=[];
-var count=0;
-var keyValue=new Object;
+// var users=[];
+// var photos=[];
+// var count=0;
+// var keyValue=new Object;
+
+var i = 1;
 
 fireDatabase.ref("Pothole_Reports/").once('value', function(snapshot){
 	snapshot.forEach(function(childSnapshot){
 		//console.log(childSnapshot.key);
-		users.push(childSnapshot.key);
-		console.log(users[count++]);
+		//users.push(childSnapshot.key);
+		//console.log(users[count++]);
 		childSnapshot.forEach(function(child_childSnapshot){
-			photos.push(child_childSnapshot.key);
+			//photos.push(child_childSnapshot.key);
 			if(child_childSnapshot.val().Status>=50){ 
-				console.log(child_childSnapshot.val().Status+" "+childSnapshot.key+" "+child_childSnapshot.key);
+				console.log(child_childSnapshot.val().Status+" "+childSnapshot.key+" "+child_childSnapshot.key+" "+child_childSnapshot.val().GPS_Coordinates+" "+child_childSnapshot.val().RealArea);
+				$("#t_body").append("<tr><td>"+i+"</td><td>"+child_childSnapshot.val().Status+"</td><td>"+child_childSnapshot.key+"</td><td>"+child_childSnapshot.val().GPS_Coordinates+"</td><td>"+child_childSnapshot.val().RealArea+"</td><td scope='col'><input class='btn btn-primary' type='button' name='engineer' value='engg' data-toggle='modal' data-target='#exampleModal'></td><td scope='col'><input class='btn btn-primary' type='button' name='user' value='user' data-toggle='modal' data-target='#exampleModal'></td></tr>");
+				i += 1;
 			}
 				
 		});
