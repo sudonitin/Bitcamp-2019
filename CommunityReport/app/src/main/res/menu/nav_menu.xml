@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item android:id="@+id/home"
+        android:title="@string/home"
+        android:icon="@drawable/ic_home_black_24dp"/>
+
+    <item android:id="@+id/viewpoints"
+        android:title="@string/view_points"
+        android:icon="@drawable/ic_account_balance_wallet_black_24dp"/>
+
+    <item android:id="@+id/rep_pothole"
+        android:title="@string/report_potholes"
+        android:icon="@drawable/ic_report_black_24dp"/>
+
+    <item android:id="@+id/rep_track"
+        android:title="@string/track_your_reports"
+        android:icon="@drawable/ic_location_searching_black_24dp"/>
+
+    <item android:id="@+id/award_points"
+        android:title="@string/points_award_system"
+        android:icon="@drawable/ic_monetization_on_black_24dp"/>
+
+    <item android:id="@+id/about"
+        android:title="@string/about_us"
+        android:icon="@drawable/ic_contact_mail_black_24dp"/>
+
+    <item android:id="@+id/logout"
+        android:title="Log Out"
+        android:icon="@drawable/ic_exit_to_app_black_24dp"/>
+
+</menu>

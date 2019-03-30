@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="5dp">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="5dp"
+        android:padding="5dp">
+
+        <TextView
+            android:id="@+id/timestamp"
+            android:layout_marginStart="5dp"
+            android:layout_marginTop="3dp"
+            android:textAppearance="@style/TextAppearance.AppCompat.Title"
+            android:textSize="18sp"
+            android:textColor="#000"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="TextView" />
+
+        <TextView
+            android:id="@+id/gps"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/timestamp"
+            android:textSize="14sp"
+            android:layout_marginStart="5dp"
+            android:textColor="#000"
+            android:layout_marginTop="3dp"
+            android:text="TextView"
+            android:textAppearance="@style/TextAppearance.AppCompat.Title" />
+
+        <TextView
+            android:id="@+id/count"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="#000"
+            android:layout_below="@id/gps"
+            android:textSize="14sp"
+            android:layout_marginStart="5dp"
+            android:layout_marginTop="3dp"
+            android:text="TextView"
+            android:textAppearance="@style/TextAppearance.AppCompat.Title" />
+
+        <TextView
+            android:id="@+id/dimensions"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="14sp"
+            android:textColor="#000"
+            android:layout_below="@id/count"
+            android:layout_marginStart="5dp"
+            android:layout_marginTop="3dp"
+            android:text="TextView"
+            android:textAppearance="@style/TextAppearance.AppCompat.Title" />
+
+        <TextView
+            android:id="@+id/status"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="14sp"
+            android:layout_below="@id/dimensions"
+            android:textColor="#000"
+            android:layout_marginStart="5dp"
+            android:layout_marginTop="3dp"
+            android:text="TextView"
+            android:textAppearance="@style/TextAppearance.AppCompat.Title" />
+
+        <ProgressBar
+            android:id="@+id/progressBar"
+            style="?android:attr/progressBarStyleHorizontal"
+            android:layout_margin="5dp"
+            android:layout_below="@id/status"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:progress="10"/>
+
+
+    </RelativeLayout>
+
+</LinearLayout>
