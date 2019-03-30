@@ -46,6 +46,9 @@ public class TrackReportActivity extends AppCompatActivity {
     ArrayList<String> itemStatus;
     ArrayList<String> itemCount;
 
+    //Dialog Items
+    ArrayList<String> dialogdetails;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -102,8 +105,27 @@ public class TrackReportActivity extends AppCompatActivity {
                 startActivity(new Intent(TrackReportActivity.this, HomeActivity.class));
             }
         });
+
+        listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+                dialogdetails = new ArrayList<String>();
+                dialogdetails.add(itemTimeStamp.get(position));
+                dialogdetails.add(itemGps.get(position));
+                dialogdetails.add(Float.toString(Float.parseFloat(itemHeight.get(position))*Float.parseFloat(itemWidth.get(position))));
+                dialogdetails.add(itemStatus.get(position));
+                openDialog(dialogdetails);
+            }
+        });
     }
 
+    public void openDialog(ArrayList<String> dialogdetails) {
+        PotholeReportDialog potholeReportDialog = new PotholeReportDialog();
+        Bundle bundle = new Bundle();
+        bundle.putStringArrayList("key", dialogdetails);
+        potholeReportDialog.setArguments(bundle);
+        potholeReportDialog.show(getSupportFragmentManager(), "Show Report");
+    }
 
     private void createListView(){
         ReportStatusAdapter myAdapter = new ReportStatusAdapter(this, itemTimeStamp, itemGps, itemStatus, itemCount, itemWidth, itemHeight);

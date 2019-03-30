@@ -34,4 +34,8 @@
     5. Use the navigation panel to visit required part of the application.</string>
     <string name="points_award_system">Points Award System</string>
     <string name="view_points">View Points</string>
+    <string name="confirm_report_completion">Confirm Report Completion</string>
+    <string name="yes">Yes</string>
+    <string name="no">No</string>
+    <string name="example">Example</string>
 </resources>

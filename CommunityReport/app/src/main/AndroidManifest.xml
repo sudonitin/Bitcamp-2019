@@ -43,7 +43,9 @@
         <activity android:name=".LoginActivity" />
         <activity android:name=".HomeActivity" />
         <activity android:name=".ProfileActivity" />
-        <activity android:name=".Report_PotholeActivity" android:screenOrientation="portrait"/>
+        <activity
+            android:name=".Report_PotholeActivity"
+            android:screenOrientation="portrait" />
         <activity android:name=".TrackReportActivity" />
         <activity android:name=".SplashScreenActivity">
             <intent-filter>
@@ -52,6 +54,7 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity android:name=".ViewPointsActivity"></activity>
     </application>
 
 </manifest>

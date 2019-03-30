@@ -81,6 +81,9 @@ public class HomeActivity extends AppCompatActivity implements NavigationView.On
             case R.id.home:
                 getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container, new HomeFragment()).commit();
                 break;
+            case R.id.viewpoints:
+                finish();
+                startActivity(new Intent(this, ViewPointsActivity.class));
             case R.id.rep_pothole:
                 finish();
                 startActivity(new Intent(this, Report_PotholeActivity.class));
@@ -88,6 +91,9 @@ public class HomeActivity extends AppCompatActivity implements NavigationView.On
             case R.id.rep_track:
                 finish();
                 startActivity(new Intent(this, TrackReportActivity.class));
+                break;
+            case R.id.award_points:
+                getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container, new AboutFragment()).commit();
                 break;
             case R.id.about:
                 getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container, new AboutFragment()).commit();
