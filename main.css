@@ -51,7 +51,7 @@ h1{
     border-radius: 5px;
     outline: none;
     height: 40px;
-    background-image:linear-gradient(to right,rgb(222,57,246),rgb(91,200,221));
+    background-image:linear-gradient(to right,rgb(1,84,186),#f4b800);
     color: #fff;
     font-size: 18px;
     box-shadow: 5px 5px 5px grey;
