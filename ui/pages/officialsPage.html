@@ -31,35 +31,35 @@
 			}
 		}
 
-		function mail(i){
-			var status = document.getElementById(i+'stat').innerHTML;
-			var time = document.getElementById(i+'time').innerHTML;
-			var location = document.getElementById(i+'loc').innerHTML;
-			var area = document.getElementById(i+'area').innerHTML;
-			var email = document.getElementById(i+'drop').value;
-			//var photo = document.getElementById(i+'stat');
-			console.log(location);
-			if(status <= 50){
-				Email.send({
-				Host : "smtp.gmail.com",
-				Port : 587,
-				SMTPAuth : true,
-				SMTPSecure : 'tls',
-				Username : "phpmailer7.0@gmail.com",
-				Password : "mailing is a good thing",
-				To : email,
-				From : "phpmailer7.0@gmail.com",
-				Subject : "You have to work according to the details mentioned",
-				Body : "The location is " + location + ". This was reported on " + time + ". The estimated area of the pothole is " + area + ". The emergency factor is " + status + "."
-		}).then(
-			message => alert(message)
-		);
+		// function mail(i){
+		// 	var status = document.getElementById(i+'stat').innerHTML;
+		// 	var time = document.getElementById(i+'time').innerHTML;
+		// 	var location = document.getElementById(i+'loc').innerHTML;
+		// 	var area = document.getElementById(i+'area').innerHTML;
+		// 	var email = document.getElementById(i+'drop').value;
+		// 	//var photo = document.getElementById(i+'stat');
+		// 	console.log(location);
+		// 	if(status == 50){
+		// 		Email.send({
+		// 		Host : "smtp.gmail.com",
+		// 		Port : 587,
+		// 		SMTPAuth : true,
+		// 		SMTPSecure : 'tls',
+		// 		Username : "phpmailer7.0@gmail.com",
+		// 		Password : "mailing is a good thing",
+		// 		To : email,
+		// 		From : "phpmailer7.0@gmail.com",
+		// 		Subject : "You have to work according to the details mentioned",
+		// 		Body : "The location is " + location + ". This was reported on " + time + ". The estimated area of the pothole is " + area + ". The emergency factor is " + status + "."
+		// }).then(
+		// 	message => alert(message)
+		// );
 			
-			}
-			else{
-				
-			}
-		}
+		// 	}
+		// 	else{
+		// 		alert('unsuccessful')
+		// 	}
+		// }
 	</script>
 </head>
 <body>
