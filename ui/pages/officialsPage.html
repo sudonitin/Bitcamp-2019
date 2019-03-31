@@ -17,8 +17,10 @@
 	<script src="https://smtpjs.com/v3/smtp.js">
 	</script>	
 	<script>
+		
+
 		function hide(i){
-			if(document.getElementById(i+'stat').innerHTML <= 50){
+			if(document.getElementById(i+'stat').innerHTML == 50){
 				document.getElementById(i+'-user').style.display = 'none';
 			}
 			else{
@@ -106,44 +108,6 @@
 				
 			</tbody>
 		</table>
-	</div>
-
-	<div id = 'accordion_container'></div>
-
-	<div id="modal-forms">
-		<div class='modal fade' id='EnggModal' tabindex='-1' role='dialog' aria-labelledby='EnggModalLabel' aria-hidden='true'>
-		  <div class='modal-dialog' role='document'>
-		    <div class='modal-content'>
-		      <div class='modal-header'>
-		        <h5 class='modal-title' class='exampleModalLabel'>Send Email to Engineer</h5>
-		        <button type='button' class='close' data-dismiss='modal' aria-label='Close'>
-		          <span aria-hidden='true'>&times;</span>
-		        </button>
-		      </div>
-		      <div class='modal-body'>
-		        <form>	
-	        		<table>
-	        			<tr>
-		        			<td>Email:</td><td>
-		        				  <select>
-									  <option value='volvo'>Volvo</option>
-									  <option value='saab'>Saab</option>
-									  <option value='mercedes'>Mercedes</option>
-									  <option value='audi'>Audi</option>
-								  </select>
-		        			</td>
-		        		</tr>
-		        		
-	        		</table>
-	        	</form>
-		      </div>
-		      <div class='modal-footer'>
-		        <button type='button' class='btn btn-secondary' data-dismiss='modal'>Close</button>
-		        <button type='button' id='submit' class='btn btn-primary' onclick="mail();">Send</button>
-		      </div>
-		    </div>
-		  </div>
-		</div>
 	</div>
 
 </body>
