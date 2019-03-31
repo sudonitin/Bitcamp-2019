@@ -13,7 +13,7 @@ if(isset($_POST['login']))
     if(mysqli_num_rows($result)==1)
     {
         $row=mysqli_fetch_array($result,MYSQLI_NUM);
-        //header('location:homepage.php');
+        header('location:ui/pages/officialsPage.html');
         echo '<script>alert("successfully logged in");</script>';
     }
     else
