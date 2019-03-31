@@ -14,7 +14,50 @@
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 	<!-- <script src="./firebase-test.js"> </script> -->
 	<script src="../../firebase-test-2.js"></script>
+	<script src="https://smtpjs.com/v3/smtp.js">
+	</script>	
+	<script>
+		function hide(i){
+			if(document.getElementById(i+'stat').innerHTML <= 50){
+				document.getElementById(i+'-user').style.display = 'none';
+			}
+			else{
+				console.log('true');
+				document.getElementById(i+'drop').style.display = 'none';
+				document.getElementById(i+'-eng').style.display = 'none';
+			}
+		}
 
+		function mail(i){
+			var status = document.getElementById(i+'stat').innerHTML;
+			var time = document.getElementById(i+'time').innerHTML;
+			var location = document.getElementById(i+'loc').innerHTML;
+			var area = document.getElementById(i+'area').innerHTML;
+			var email = document.getElementById(i+'drop').value;
+			//var photo = document.getElementById(i+'stat');
+			console.log(location);
+			if(status <= 50){
+				Email.send({
+				Host : "smtp.gmail.com",
+				Port : 587,
+				SMTPAuth : true,
+				SMTPSecure : 'tls',
+				Username : "phpmailer7.0@gmail.com",
+				Password : "mailing is a good thing",
+				To : email,
+				From : "phpmailer7.0@gmail.com",
+				Subject : "You have to work according to the details mentioned",
+				Body : "The location is " + location + ". This was reported on " + time + ". The estimated area of the pothole is " + area + ". The emergency factor is " + status + "."
+		}).then(
+			message => alert(message)
+		);
+			
+			}
+			else{
+				
+			}
+		}
+	</script>
 </head>
 <body>
 	<div class="myrow">
@@ -30,6 +73,7 @@
 					<th scope="col">Timestamp</th>
 					<th scope="col">Location</th>
 					<th scope="col">Est. Area</th>
+					<th scope="col">Select Email</th>
 					<th scope="col">Submit To Engineer</th>
 					<th scope="col">Submit To User</th>
 				</tr>
@@ -64,9 +108,10 @@
 		</table>
 	</div>
 
+	<div id = 'accordion_container'></div>
 
 	<div id="modal-forms">
-		<!-- <div class='modal fade' id='EnggModal' tabindex='-1' role='dialog' aria-labelledby='EnggModalLabel' aria-hidden='true'>
+		<div class='modal fade' id='EnggModal' tabindex='-1' role='dialog' aria-labelledby='EnggModalLabel' aria-hidden='true'>
 		  <div class='modal-dialog' role='document'>
 		    <div class='modal-content'>
 		      <div class='modal-header'>
@@ -88,19 +133,17 @@
 								  </select>
 		        			</td>
 		        		</tr>
-		        		<tr>
-		        			<td>Details:<p id='row_data'></p></td>
-		        		</tr>
+		        		
 	        		</table>
 	        	</form>
 		      </div>
 		      <div class='modal-footer'>
 		        <button type='button' class='btn btn-secondary' data-dismiss='modal'>Close</button>
-		        <button type='button' id='submit' class='btn btn-primary'>Send</button>
+		        <button type='button' id='submit' class='btn btn-primary' onclick="mail();">Send</button>
 		      </div>
 		    </div>
 		  </div>
-		</div> -->
+		</div>
 	</div>
 
 </body>
