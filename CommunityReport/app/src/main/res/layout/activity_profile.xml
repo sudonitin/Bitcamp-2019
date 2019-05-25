@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="15dp"
+    android:background="@drawable/app_bg"
+    tools:context=".ProfileActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="30sp"
+            android:textColor="#FFFFFF"
+            android:layout_gravity="center_horizontal"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:text="@string/profile"
+            android:textStyle="bold"/>
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/full_name"
+            android:inputType="text"
+            android:background="@drawable/edittext_bg"
+            android:id="@+id/UserFullName"
+            android:layout_margin="15dp"/>
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="15dp"
+            android:background="@drawable/edittext_bg"
+            android:inputType="textMultiLine"
+            android:id="@+id/UserAddress"
+            android:hint="@string/address"/>
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="15dp"
+            android:digits="0123456789"
+            android:ems="10"
+            android:background="@drawable/edittext_bg"
+            android:inputType="phone"
+            android:id="@+id/UserPhone"
+            android:hint="@string/phone_number"/>
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="15dp"
+            android:id="@+id/buttonSave"
+            android:text="@string/save"
+            android:background="@drawable/button_bg"
+            android:textSize="20sp"
+            android:textAppearance="@style/TextAppearance.AppCompat.Button"
+            android:textColor="#FFFFFF"
+            android:textStyle="bold"/>
+
+    </LinearLayout>
+
+</RelativeLayout>
