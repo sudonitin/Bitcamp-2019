@@ -1,5 +1,5 @@
 <h1>Bitcamp-2019</h1>
-<i>Won the most innovative solution at Bitcamp 2019.</i>
+<i><b>Won the most innovative solution at Bitcamp 2019.</b></i>
 
 An android application for citizens(users) which allows them to register issues on potholes in their area.<br>
 Web for report management
