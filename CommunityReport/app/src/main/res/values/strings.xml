@@ -1,0 +1,41 @@
+<resources>
+    <string name="app_name">Come Fix Me</string>
+    <string name="enter_your_email">Enter your email</string>
+    <string name="enter_your_password">Enter your password</string>
+    <string name="register_user">Register User</string>
+    <string name="already_registered_sign_in_here">Already Registered? Sign in here</string>
+    <string name="not_have_a_account_signup_here">Not have a account? SignUp here..</string>
+    <string name="user_login">User Login</string>
+    <string name="user_registration">User Registration</string>
+    <string name="open">Open</string>
+    <string name="close">Close</string>
+    <string name="logout">Logout</string>
+    <string name="large_text">Large Text</string>
+    <string name="sign_in">Sign In</string>
+    <string name="profile">Profile Information</string>
+    <string name="full_name">Full Name</string>
+    <string name="address">Address</string>
+    <string name="phone_number">Phone Number</string>
+    <string name="save">Save</string>
+    <string name="home">Home</string>
+    <string name="report_potholes">Report Potholes</string>
+    <string name="track_your_reports">Track your Reports</string>
+    <string name="about_us">About Us</string>
+    <string name="welcome">Welcome</string>
+    <string name="capture_and_upload">Capture and Upload</string>
+    <string name="cap_and_upload_text_view">Click on Capture and Upload Button to report the Potholes</string>
+    <string name="capture_image">Capture Image</string>
+    <string name="confirm_and_upload">Confirm and Upload</string>
+    <string name="welcome_home_screen">Read the Instructions carefully\n
+        1. This application uses your device storage and camera for reporting potholes.\n
+    2. This application also uses your GPS to get your current device location while taking the photo.\n
+    3. This application empowers the citizen to report problems directly to the authorities.\n
+    4. This application does not guarantee the solution to a specified problem.\n
+    5. Use the navigation panel to visit required part of the application.</string>
+    <string name="points_award_system">Points Award System</string>
+    <string name="view_points">View Points</string>
+    <string name="confirm_report_completion">Confirm Report Completion</string>
+    <string name="yes">Yes</string>
+    <string name="no">No</string>
+    <string name="example">Example</string>
+</resources>
