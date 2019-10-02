@@ -42,3 +42,7 @@ Web for report management
 
 <h3>Demontration:</h3>
 <a href='https://youtu.be/cN9kijExwyI'>Click Me!</a>
+
+
+### If you liked this Repository, then please leave a star on this repository so that we can know you liked this project. It motivates us to contribute more in such projects in the future.
+### Happy Coding =)
