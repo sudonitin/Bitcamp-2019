@@ -44,5 +44,6 @@ Web for report management
 <a href='https://youtu.be/cN9kijExwyI'>Click Me!</a>
 
 
-### If you liked this Repository, then please leave a star on this repository so that we can know you liked this project. It motivates us to contribute more in such projects in the future.
+### Support Me
+If you liked this Repository, then please leave a star on this repository. It motivates us to contribute more in such Open Source projects.
 ### Happy Coding =)
